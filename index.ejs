@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>File Manager</h1>
+    <form action="/create" method="POST" class="outer-enter-content-box">
+        <div class="enter-content-box">
+        <input class="inp1" type="text" placeholder="Enter file name..." name="Title">
+        <textarea class="inp2" placeholder="Enter file content..." name="Details"></textarea>
+        
+    </div>
+    <button class="button-task" type="submit">Create File</button>
+</form>
+
+<div style="display:flex; gap:10px; margin:5px;">
+    <% if(files.length==0) { %>
+    <h6>No available files</h6>
+    <%} else { files.forEach((val,index)=>{ %>
+        <div class ="task-container">
+            <h2><%= val %></h2>
+            <div style="display:flex; justify-content: space-between; align-items:center; padding:0 10px 0 0;">
+                <a href="/file/<%= val %>">Read More</a>
+                
+                <form action="/delete/<%= val %>" method="POST">
+                <button style="color:rgb(187, 3, 3);" type="submit">Delete</button>
+                </form>
+            </div>
+        </div>
+    <%})%>
+    <%}%>
+
+<!-- <div class ="task-container">
+    <h2>Some Task Goes Here...</h2>
+    <a>Read More</a>
+</div> -->
+</div>
+</body>
+</html>

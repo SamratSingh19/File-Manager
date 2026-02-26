@@ -1,0 +1,82 @@
+body{
+    background-color: rgb(25, 25, 25);
+}
+h1{
+    color:white;
+}
+.outer-enter-content-box
+{
+        width:35%;
+        /* margin:10px auto; */
+        margin:25px 0px ;
+}
+.enter-content-box
+{
+    /* background-color: aqua; */
+    display:flex;
+    flex-direction: column;
+
+}
+.enter-content-box>*
+{
+    border:none;
+    background-color: rgb(55, 55, 55);
+    color:aliceblue;
+    font-size: 14px;;
+}
+.inp1
+{
+    height:22px;
+    margin:5px;
+}
+.inp2
+{
+    height:44px;
+    margin:5px;
+    resize:none;
+}
+.button-task
+{
+    border:none;
+    margin-top: 5px;;
+    padding: 7px 10px;
+    color:white;
+    border-radius: 3px;
+    background-color: rgb(56, 155, 255);
+}
+.button-task:hover
+{
+    background-color: rgb(52, 137, 223);
+}
+
+.task-container
+{
+    background-color: rgb(55,55,55);
+    width:300px;
+    border-radius: 7px;
+}
+.task-container h2{
+    margin:10px;
+}
+.task-container h2{
+    color:white;
+}
+.task-container a{
+    color: rgb(68, 132, 211) ;
+    margin:10px;
+    font-size: 13.5px;
+    text-decoration: none;
+    /* padding-bottom: 5px; */
+}
+
+.task-container a:hover{
+    text-decoration: underline;
+}
+.task-container button{
+    border:none;
+    background-color: rgba(0,0,0,0);
+}
+.task-container button:hover{
+    text-decoration: underline;
+    cursor:pointer;
+}
